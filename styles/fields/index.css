@@ -45,7 +45,26 @@ input[type="date"] {
     transform: translateY(-50%);
   }
 }
+
 select {
   background: url(../../assets/icons/arrow-down-01.svg) no-repeat
     calc(100% - 1rem);
+}
+
+.address .flex {
+  gap: 1.25rem;
+}
+
+/* todo input-wrapper que tenha um disabled */
+.input-wrapper:has([disabled]) {
+  opacity: 0.5;
+}
+
+/* input que tiver um disabled habilitado, se tiver pegar as configurações */
+input {
+  &[disabled] {
+    background-color: var(--surface-disabled);
+    border: 1px solid var(--stroke-default);
+    color: var(--text-primary);
+  }
 }
